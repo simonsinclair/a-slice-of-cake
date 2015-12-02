@@ -1,0 +1,12 @@
+{
+  "private": true,
+  "name": "a-slice-of-cake",
+  "description": "",
+  "version": "0.0.0",
+  "homepage": "https://github.com/simonsinclair/a-slice-of-cake",
+  "license": "MIT",
+  "dependencies": {
+    "jquery": "~2.1.1",
+    "normalize.css": "~3.0.1"
+  }
+}
