@@ -2,7 +2,7 @@
 //
 
 @import 'mq';
-// @import 'grid';
+@import 'grid';
 
 @mixin clearfix {
 
@@ -27,7 +27,7 @@ html {
   box-sizing: inherit;
 }
 body {
-  color: #333;
+  color: #404040;
   font-size: 16px;
   line-height: 22px; // 1.4
   // -webkit-font-smoothing: antialiased;
@@ -43,134 +43,23 @@ h2 {
 //
 
 .page {
-  padding-right: 4px;
-  padding-left: 4px;
+  padding: 72px 4px 72px 4px;
   margin: 0 auto;
   max-width: 1280px;
 }
 
-// Slice
-.slice {
-  display: flex;
-  flex-wrap: wrap;
+// SLICE
+//
 
-  & > .slice__item {
-    padding-right: 8px;
-    padding-left: 8px;
-    width: 50%;
+@import '8-slice';
 
-    @include mq(g3) {
-      width: 33.33333%;
-    }
-  }
 
-  & > .slice__item:nth-child(1) {
-    order: 1;
+// OBJECTS
+//
 
-    @include mq(g3) {
-      width: 50%;
-    }
-    @include mq(g4) {
-
-    }
-  }
-  & > .slice__item:nth-child(2) {
-    order: 2;
-
-    @include mq(g3) {
-
-    }
-    @include mq(g4) {
-
-    }
-  }
-
-  // Ad
-  & > .slice__item:nth-child(3) {
-    order: 3;
-    width: 100%;
-
-    @include mq(g3) {
-      order: 1;
-      width: 50%;
-    }
-  }
-
-  & > .slice__item:nth-child(4) {
-    order: 4;
-
-    @include mq(g3) {
-
-    }
-    @include mq(g4) {
-
-    }
-  }
-  & > .slice__item:nth-child(5) {
-    order: 5;
-
-    @include mq(g3) {
-
-    }
-    @include mq(g4) {
-
-    }
-  }
-  & > .slice__item:nth-child(6) {
-    order: 6;
-
-    @include mq(g3) {
-
-    }
-    @include mq(g4) {
-
-    }
-  }
-  & > .slice__item:nth-child(7) {
-    order: 7;
-
-    @include mq(g3) {
-
-    }
-    @include mq(g4) {
-
-    }
-  }
-  & > .slice__item:nth-child(8) {
-    order: 8;
-
-    @include mq(g3) {
-      .promo__thumb {
-        display: none;
-      }
-    }
-    @include mq(g4) {
-
-    }
-  }
-  & > .slice__item:nth-child(9) {
-    order: 9;
-
-    @include mq(g3) {
-      .promo {
-        margin-top: 0;
-      }
-        .promo__thumb {
-          display: none;
-        }
-    }
-    @include mq(g4) {
-
-    }
-  }
-
-}
-  .slice__item {}
-  .slice__item--ad {}
-
-// Promo
 .promo {
-  margin-top: 24px;
+  padding-left: 4px;
+  padding-right: 4px;
 }
   .promo__thumb {
     display: block;
@@ -209,7 +98,7 @@ h2 {
 // Ad
 .ad {
   background-color: #999;
-  margin: 24px auto 0;
+  margin: 0 auto;
   height: 250px;
   width: 300px;
 }
