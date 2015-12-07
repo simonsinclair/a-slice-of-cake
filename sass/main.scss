@@ -60,19 +60,22 @@ h2 {
 .promo {
   padding-left: 4px;
   padding-right: 4px;
+  padding-bottom: 24px;
+
+  @include mq(g3) {
+    padding-bottom: 32px;
+  }
 }
   .promo__thumb {
     display: block;
+    margin-bottom: 8px;
     width: 100%;
   }
   .promo__headline {
     font-size: 18px;
-    margin-top: 8px;
+    margin-bottom: 8px;
   }
-  .promo__metadata {
-    margin-top: 8px;
-    margin-bottom: 0;
-  }
+  .promo__metadata {}
 
 .metadata {
   @include clearfix;
@@ -80,6 +83,8 @@ h2 {
   font-size: 14px;
   line-height: 1;
   list-style: none;
+  margin-top: 0;
+  margin-bottom: 0;
   padding-left: 0;
 
   li {
@@ -89,7 +94,7 @@ h2 {
 }
   .metadata__timestamp {
     border-right: 1px solid #CCC;
-    padding-right: 6px;
+    padding-right: 5px; // -1 because of the keyline/border
   }
   .metadata__section {
     color: #A61B1B;
@@ -98,7 +103,11 @@ h2 {
 // Ad
 .ad {
   background-color: #999;
-  margin: 0 auto;
+  margin: 0 auto 24px;
   height: 250px;
   width: 300px;
+
+  @include mq(g2) {
+    margin-bottom: 32px;
+  }
 }
