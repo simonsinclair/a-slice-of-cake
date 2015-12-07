@@ -31,6 +31,9 @@
     @include mq(g4) {
       width: 33.33333%;
     }
+    @include mq(g5) {
+      width: 25%;
+    }
   }
 
     // A SEGMENT
@@ -47,7 +50,7 @@
         width: 33.33333%;
       }
       @include mq(g5) {
-
+        width: 25%;
       }
     }
 
@@ -56,6 +59,9 @@
 
       @include mq(g4) {
         width: 50%;
+      }
+      @include mq(g5) {
+        width: 25%;
       }
     }
     .slice__segment--2  {
@@ -68,6 +74,11 @@
       @include mq(g3) {
         order: 1;
         width: 50%;
+      }
+      @include mq(g4) {}
+      @include mq(g5) {
+        order: 5;
+        width: 25%;
       }
     }
     .slice__segment--3  {
