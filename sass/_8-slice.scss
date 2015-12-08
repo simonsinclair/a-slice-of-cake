@@ -4,6 +4,7 @@
 .slice {
   display: flex;
   flex-wrap: wrap;
+  margin-bottom: 72px;
 }
 
   // GROUP OF SEGMENTS
@@ -96,3 +97,82 @@
     .slice__segments--7-8  {
       order: 8;
     }
+
+// NO AD
+//
+
+.slice--no-ad {
+
+  .slice__segments--double {
+
+    @include mq(g3) {
+      flex-wrap: wrap;
+      flex-direction: row;
+      width: 33.33333% * 2;
+
+      .slice__segment {
+        width: 50%;
+      }
+        .promo__thumb {
+          display: block;
+        }
+    }
+    @include mq(g4) {
+      width: 25% * 2;
+    }
+  }
+
+    // A SEGMENT
+    //
+
+    .slice__segment {
+      width: 100%;
+
+      @include mq(g2) {
+        width: 50%;
+      }
+      @include mq(g3) {
+        width: 33.33333%;
+      }
+      @include mq(g4) {
+        width: 25%;
+      }
+    }
+
+    .slice__segment--1  {
+      order: 1;
+
+      @include mq(g3) {
+        width: 50%;
+      }
+      @include mq(g4) {
+        width: 25%;
+      }
+    }
+    .slice__segment--2  {
+      order: 2;
+
+      @include mq(g3) {
+        width: 50%;
+      }
+      @include mq(g4) {
+        width: 25%;
+      }
+    }
+    .slice__segment--3  {
+      order: 4;
+    }
+    .slice__segment--4  {
+      order: 5;
+    }
+    .slice__segment--5  {
+      order: 6;
+    }
+    .slice__segment--6  {
+      order: 7;
+    }
+    .slice__segments--7-8  {
+      order: 8;
+    }
+}
+
